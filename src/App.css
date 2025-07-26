@@ -1,0 +1,374 @@
+/* GERAL */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto;
+
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #e8faea;
+    color: rgb(0, 77, 38);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+}
+
+.titulo-pagina {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px; 
+}
+
+
+/* MENU FIXO */
+
+.fixed {
+    position: fixed;
+    background-color: #006928;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+
+/* MENU INDEX */
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    background-color: #006928;
+    padding: 15px;
+    margin: 0;
+
+}
+
+
+
+.menu li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.menu li a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: rgb(0, 247, 205);
+    
+}
+
+.menu li a.ativo {
+    color: chocolate;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* BANNER PAGINA INDEX */
+
+.banner-apresentacao {
+    background-color: #d1f5d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    border-radius: 15px;
+    margin: 30px;
+
+    background-image: url(../IMAGENS/BANNER-TESTEED.png);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.titulo-banner {
+    font-size: 36px;
+    color: rgb(186, 241, 219);
+
+}
+
+.imagem-perfil img {
+    width: 120px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px #818181;
+
+}
+
+
+
+/* MENU INICIO */
+
+.container-inicio {
+    flex: 1;
+}
+
+.container-inicio p {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center; 
+    padding: 0 10px;  
+
+}
+
+/* MENU EXPERIÊNCIA */
+
+.container-experiencia {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 10px;
+}
+
+.exp-item {
+    background-color: #d1f5d5;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;    
+
+}
+
+.exp-item h2 {
+    margin-top: 0;
+    font-size: 24px;
+
+}
+
+.exp-item p {
+    margin: 8px 0;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+
+
+
+/* MENU QUALIFICAÇÕES */
+
+.container-qualificacoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+
+/* CARD INDIVIDUAL */
+.card {
+    background-color: #d1f5d5;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 400px;
+
+}
+
+/* MENU CONTATO */
+
+.pagina-contato {
+    flex: 1;
+    
+}
+
+.container-contato {
+    max-width: 10000px;
+    margin: 40px auto;
+    padding: 10px;
+    background-color: #d1f5d5;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-contato {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.form-contato button {
+    padding: 5px 10px; 
+    background-color: #49a86d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+/* FOOTER */
+
+.rodape {
+    background-color: #006928;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0;  
+           
+}
+
+/* ICONES REDES SOCIAIS */
+
+.icones-sociais {
+    margin-top: 10px;
+}
+
+.icones-sociais a {
+    margin: 0 8px;
+    display: inline-block;
+}
+
+.icones-sociais img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.icones-sociais img:hover {
+    transform: scale(1.2);
+}
+
+
+/* INICIO MOBILE RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    .banner-apresentacao {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+        padding: 15px 15px;
+        margin: 20px;
+
+    }
+
+    .titulo-banner {
+        font-size: 28px;
+    }
+}
+
+/* MENU HAMBURGUER */
+
+.menu-toggle {
+    display: none;
+    font-size: 50px;
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+
+    position: relative;
+    width: 40px;
+    height: 60px;
+    z-index: 1100;
+}
+
+
+/* Estilo das 3 Barrinhas */
+
+.menu-toggle span {
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #fff;
+    margin: 8px 5px;
+    border-radius: 2px;
+    transition: 0.4s;
+
+}
+
+/* Quando botão estiver ativo */
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(11px, -11px);
+}
+
+
+/*  */
+.menu-toggle:focus {
+    outline: none;
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+}
+
+ 
+/* MENU MOBILE RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        
+        transform: scaleY(0); 
+        transform-origin: top;  
+        opacity: 0;
+        background-color: #006928;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        transition: transform 0.4s, opacity 0.4s ease-in-out;
+    }
+
+    .menu.show {
+        
+        transform: scaleY(1);
+        opacity: 1;
+        padding: 20px 0;
+    }
+}
+
+/* TEXTOS INICIO RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    .container-inicio p {
+        margin: 20px auto;
+        padding: 0 20px;
+        font-size: 16px;
+
+    }
+}
