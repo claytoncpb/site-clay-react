@@ -26,7 +26,7 @@ function Experiencia () {
                 Utilização de Adobe Premiere, After Effects e Photoshop.</p>
             </div>
 
-            <div className="exp-item">7
+            <div className="exp-item">
                 <h2>Analista de Implantação</h2>
                 <p><strong>Cargo: </strong>Analista de Implantação</p>
                 <p><strong>Período: </strong>2020 / 2023</p>

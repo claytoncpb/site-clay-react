@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -9,10 +10,11 @@ function Navbar() {
         <span></span>
       </button>
         <ul className="menu">
-          <li><a href="#" className="ativo">Início</a></li>
-          <li><a href="#">Experiência</a></li>
-          <li><a href="#">Qualificações</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><NavLink to="/" className={({isActive }) => (isActive ? "ativo" : "")}>Inicío</NavLink></li>
+          <li><NavLink to="/experiencia" className={({isActive}) => (isActive ? "ativo" : "")}>Experência</NavLink></li>
+          <li><NavLink to="/qualificacoes" className={({isActive}) => (isActive ? "ativo" : "")}>Qualificações</NavLink></li>
+          <li><NavLink to="/contato" className={({isActive}) => (isActive ? "ativo" : "")}>Contato</NavLink></li>
+          
         </ul>
     </nav>
   );

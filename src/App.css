@@ -188,7 +188,7 @@ body {
 }
 
 .container-contato {
-    max-width: 10000px;
+    max-width: 1000px;
     margin: 40px auto;
     padding: 10px;
     background-color: #d1f5d5;
@@ -205,13 +205,17 @@ body {
 .form-contato input,
 .form-contato textarea {
     width: 100%;
+    background-color: #ffffff;
+    color: #000000;
     box-sizing: border-box;
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 10px;
-    border: none;
+    border: none; /* Retirar todas as bordas */
+    outline: none; /* Retirar borda dos box quando clicar nele */
 
 }
+
 
 .form-contato button {
     padding: 5px 10px; 
@@ -226,13 +230,20 @@ body {
 
 /* FOOTER */
 
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .rodape {
+    width: 100vw;
     background-color: #006928;
     color: white;
     text-align: center;
     padding: 5px;
     font-size: 14px;
-    margin: 0;  
+    margin: 0;
            
 }
 
