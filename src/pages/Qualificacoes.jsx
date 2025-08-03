@@ -3,6 +3,11 @@ import React from "react";
 function Qualificacoes () {
     return (
         <main className="container-qualificacoes">
+
+            <div style={{ width: '100%'}}>
+            <h1 className="titulo-pagina">Minhas Qualificações</h1>
+            </div>
+            
             <div className="card">
                 <h2>🎓 Formação Acadêmica</h2>
                 <p>Graduação em Gestão da Tecnologia da Informação — UNG (2014)</p>

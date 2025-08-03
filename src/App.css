@@ -19,7 +19,7 @@ body {
 .titulo-pagina {
     text-align: center;
     font-size: 32px;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
 }
 
 
@@ -97,8 +97,8 @@ body {
 
 .titulo-banner {
     font-size: 36px;
-    color: rgb(186, 241, 219);
-
+    color: #b0eab7;
+    text-shadow: 1px 1px 2px #004d26;
 }
 
 .imagem-perfil img {
@@ -129,15 +129,15 @@ body {
 .container-experiencia {
     max-width: 1000px;
     margin: 40px auto;
-    padding: 0 10px;
+    padding: 0 20px; /* Espaçamento entre os box e limites da pagina */
 }
 
 .exp-item {
-    background-color: #d1f5d5;
+    background-color: #b0eab7;
     padding: 10px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 25px;    
+    margin-bottom: 25px; 
 
 }
 
@@ -152,9 +152,6 @@ body {
     line-height: 1.6;
     font-size: 16px;
 }
-
-
-
 
 
 /* MENU QUALIFICAÇÕES */
@@ -172,7 +169,7 @@ body {
 
 /* CARD INDIVIDUAL */
 .card {
-    background-color: #d1f5d5;
+    background-color: #b0eab7;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -188,10 +185,10 @@ body {
 }
 
 .container-contato {
-    max-width: 1000px;
+    max-width: 700px;
     margin: 40px auto;
-    padding: 10px;
-    background-color: #d1f5d5;
+    padding: 20px;
+    background-color: #b0eab7;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -207,12 +204,14 @@ body {
     width: 100%;
     background-color: #ffffff;
     color: #000000;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Garante que qualquer padding/borda fique somente dentro da largura maxima sem estourar os limites do campo */
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 10px;
     border: none; /* Retirar todas as bordas */
     outline: none; /* Retirar borda dos box quando clicar nele */
+    resize: vertical; /* Permite somente aumentar a altura */
+    max-width: 100%; /* Impede que ultrapasse o limite do box verde */
 
 }
 
@@ -225,7 +224,7 @@ body {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    
+    margin-top: 10px; /* Espaçamento do botão aos outros elementos */    
 }
 
 /* FOOTER */
@@ -297,6 +296,8 @@ body {
     cursor: pointer;
 
     position: relative;
+    bottom: 15px;
+    right: 40px;
     width: 40px;
     height: 60px;
     z-index: 1100;
@@ -307,12 +308,12 @@ body {
 
 .menu-toggle span {
     display: block;
-    height: 5px;
-    width: 100%;
+    height: 4px;
+    width: 30px;
     background-color: #fff;
-    margin: 8px 5px;
+    margin: 6px auto   ;
     border-radius: 2px;
-    transition: 0.4s;
+    transition: all 0.3s ease;
 
 }
 
@@ -327,7 +328,7 @@ body {
 }
 
 .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(11px, -11px);
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 
@@ -371,6 +372,10 @@ body {
         opacity: 1;
         padding: 20px 0;
     }
+
+    .card {
+        width: 100%;
+    }
 }
 
 /* TEXTOS INICIO RESPONSIVIDADE */
@@ -381,5 +386,11 @@ body {
         padding: 0 20px;
         font-size: 16px;
 
+    }
+}
+
+@media (max-width: 768px) {
+    .container-contato {
+        width: 310px;
     }
 }
